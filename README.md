@@ -1,7 +1,9 @@
 Architecture Overview
+---
  Frontend
 * React (with Vite)
 * Modern CSS / UI
+---
  Backend
 * REST APIs(fastAPI)
   
@@ -109,37 +111,37 @@ A system that **monitors, detects, and responds** — not just displays data.
 
 Getting Started
 
-1. Clone the repo
-git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
-cd OS_HACKATHON
+1. Clone the repo:
+*git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
+*cd OS_HACKATHON
 
-2. Install requirements
-pip install -r requirements.txt
+2. Install requirements:
+*pip install -r requirements.txt
 
-4. Run Frontend
-cd frontend
-npm install
-npm run dev
+4. Run Frontend:
+*cd frontend
+*npm install
+*npm run dev
 
-5. Run Backend
-py -m uvicorn backend.app:app --reload
+5. Run Backend:
+*py -m uvicorn backend.app:app --reload
 
-6. Run UI in terminal
-cd cli
-run the main.py
+6. Run UI in terminal:
+*cd cli
+*run the main.py
 
-Future Improvements
+Future Improvements:
 
 * Backend API integration
 * Authentication system
 * Database integration
 * Deployment (Vercel / Render)
 
-Contribution
+Contribution:
 
 This is a hackathon project, but suggestions and improvements are always welcome.
 
-Author
+Author:
 Arit Patra
 
 
