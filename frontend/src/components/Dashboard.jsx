@@ -22,7 +22,7 @@ export default function Dashboard() {
       } catch (err) {
         console.error(err);
       }
-    }, 1500); // smoother refresh
+    }, 1500); 
 
     return () => clearInterval(interval);
   }, []);
@@ -32,19 +32,19 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
 
-      {/* 🔥 TOP DIALS */}
+      
       <div className="top-row">
         <CircleDial value={stats.cpu.total_cpu_percent} label="CPU" />
         <CircleDial value={stats.memory.percent} label="Memory" />
         <CircleDial value={stats.disk.percent} label="Disk" />
       </div>
 
-      {/* 🔥 GRAPH */}
+     
       <div className="graph-full glass">
         <LineChartComp value={stats.cpu.total_cpu_percent} />
       </div>
 
-      {/* 🔥 TABLE */}
+    
       <ProcessTable processes={processes} />
     </div>
   );
