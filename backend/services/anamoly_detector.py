@@ -6,9 +6,6 @@ MEMORY_THRESHOLD = 50.0
 
 
 def detect_anomalies():
-    """
-    Detects processes exceeding CPU or memory thresholds
-    """
     processes = get_all_processes()
     alerts = []
 
