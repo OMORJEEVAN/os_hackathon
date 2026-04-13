@@ -60,7 +60,7 @@ cd frontend
 npm install
 npm run dev
 
-3.Run Backend
+3. Run Backend
 py -m uvicorn backend.app:app --reload
 
 Future Improvements
