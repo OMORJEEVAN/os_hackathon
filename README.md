@@ -10,35 +10,60 @@ Architecture Overview
  Project Structure
 ```
 OS_HACKATHON/
-│
-├── frontend/                 # React frontend
+├── test.py
+├── frontend/
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── vite.config.js
 │   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── backend/                  # Python backend
-   ├── app.py                # Entry point
-   │
-   ├── models/               # Data models & schemas
-   │   └── schemas.py
-   │
-   ├── routers/              # API routes
-   │   ├── __init__.py
-   │   └── system_router.py
-   │
-   ├── services/             # logic
-   │   ├── anomaly_detector.py
-   │   ├── process_manager.py
-   │   └── system_stat.py
-   │
-   ├── utils/                # Helper functions
-   │   └── helper.py
-   │
-   ├── data/                 # Data storage
-   ├── cli/                  # CLI tools
-   └── __pycache__/          # Ignored files
-```
-
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── styles/
+│   │   │   ├── alert.css
+│   │   │   ├── card.css
+│   │   │   ├── circleDial.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── semiGauge.css
+│   │   │   └── table.css
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   └── components/
+│   │       ├── AlertPopup.jsx
+│   │       ├── CircleDial.jsx
+│   │       ├── CpuGauge.jsx
+│   │       ├── Dashboard.jsx
+│   │       ├── LineChart.jsx
+│   │       ├── ProcessTable.jsx
+│   │       ├── SemiGauge.jsx
+│   │       └── StatsCard.jsx
+│   ├── 
+├── cli/
+│   ├── commands.py
+│   ├── main.py
+│   ├── ui.py
+│   
+└── backend/
+    ├── app.py
+    ├── __init__.py 
+    ├── utils/
+    └── helper.py
+     ├── services/
+     │   ├── anamoly_detector.py
+     │   ├── process_manager.py
+     │   ├── system_stat.py
+     │   ├── __init__.py
+     │   
+     ├── routers/
+     │   ├── system_router.py
+     │   ├── __init__.py
+     │   
+     │ 
+     └── models/
+         └── schemas.py```
 ---
 
  Key Highlights
@@ -64,7 +89,8 @@ npm run dev
 py -m uvicorn backend.app:app --reload
 
 4. Run UI in terminal
-   
+   cd cli
+   run the main.py
 
 Future Improvements
 
