@@ -9,13 +9,13 @@ html, body {
   height: 100%;
 }
 
-/* 🔥 FULL SCREEN DASHBOARD */
+
 .dashboard {
   width: 100%;
   min-height: 100vh;
   padding: 20px;
 
-  /* 🎨 SMOOTH GRADIENT */
+  
   background: linear-gradient(
     120deg,
     #6f7693,
@@ -31,7 +31,7 @@ html, body {
   font-family: "Segoe UI", sans-serif;
 }
 
-/* 🔥 PREMIUM ANIMATION */
+
 @keyframes premiumGradient {
   0% {
     background-position: 0% 50%;
@@ -49,7 +49,7 @@ html, body {
     background-position: 0% 50%;
   }
 }
-/* 🔥 TOP DIALS */
+
 .top-row {
   width: 100%;
   display: flex;
@@ -59,19 +59,19 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* EACH CARD SHOULD EXPAND */
+
 .top-row > * {
   flex: 1;
 }
 
-/* 🔥 GRAPH FULL WIDTH */
+
 .graph-full {
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
 }
 
-/* 🔥 GLASS */
+
 .glass {
   width: 100%;
 
@@ -92,7 +92,7 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* LOADING */
+
 .loading {
   display: flex;
   justify-content: center;
