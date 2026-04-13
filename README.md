@@ -112,27 +112,27 @@ It enables users not only to observe system behavior but also to detect and resp
 ## Getting Started
 
 ### 1. Clone the Repository
-git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
+-git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
 
-cd OS_HACKATHON
+-cd OS_HACKATHON
 
 ### 2. Install Backend Requirements
-pip install -r requirements.txt
+-pip install -r requirements.txt
 
 ### 3. Run Backend
-py -m uvicorn backend.app:app --reload
+-py -m uvicorn backend.app:app --reload
 
 ### 4. Run Frontend
-cd frontend
-npm install
-npm run dev
+-cd frontend
+-npm install
+-npm run dev
 
 ### 5. Access the Application
-http://localhost:5173/
+-http://localhost:5173/
 
 ### 6. Run CLI Interface
-cd cli
-python main.py
+-cd cli
+-python main.py
 
 
 
