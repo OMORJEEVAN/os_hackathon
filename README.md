@@ -63,7 +63,7 @@ OS_HACKATHON/
      │   
      │ 
      └── models/
-         └── schemas.py```
+         └── schemas.py
 ---
 
  Key Highlights
@@ -89,8 +89,8 @@ npm run dev
 py -m uvicorn backend.app:app --reload
 
 4. Run UI in terminal
-   cd cli
-   run the main.py
+cd cli
+run the main.py
 
 Future Improvements
 
