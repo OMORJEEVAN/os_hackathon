@@ -7,7 +7,7 @@ export default function AlertPopup({ alerts }) {
     <div className="alert-container">
       {alerts.map((p) => (
         <div key={p.pid} className="alert-box">
-          🚨 High Risk Process Detected: <b>{p.name}</b>
+           High Risk Process Detected: <b>{p.name}</b>
         </div>
       ))}
     </div>
