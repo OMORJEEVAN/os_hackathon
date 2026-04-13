@@ -1,8 +1,8 @@
 from backend.services.process_manager import get_all_processes
 
 
-CPU_THRESHOLD = 50.0      # % CPU usage
-MEMORY_THRESHOLD = 50.0  # % Memory usage
+CPU_THRESHOLD = 50.0      
+MEMORY_THRESHOLD = 50.0  
 
 
 def detect_anomalies():
