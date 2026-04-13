@@ -6,19 +6,19 @@ def get_all_processes():
     """
     processes = []
 
-    # First call to initialize CPU percent
+    
     for proc in psutil.process_iter():
         try:
             proc.cpu_percent(None)
         except:
             continue
 
-    # Second call to get actual values
+    
     for proc in psutil.process_iter(['pid', 'name', 'cpu_percent', 'memory_percent']):
         try:
             info = proc.info
 
-            # Filter useless/system processes
+            
             if not info['name'] or info['name'] == "System Idle Process":
                 continue
 
@@ -81,7 +81,7 @@ def kill_process(pid):
     """
     try:
         proc = psutil.Process(pid)
-        proc.terminate()  # graceful kill
+        proc.terminate()  
 
         return {
             "status": "success",
