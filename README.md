@@ -1,9 +1,7 @@
 Architecture Overview
-
  Frontend
 * React (with Vite)
 * Modern CSS / UI
-
  Backend
 * REST APIs(fastAPI)
   
@@ -64,15 +62,50 @@ OS_HACKATHON/
      │ 
      └── models/
          └── schemas.py
+```
+```
+System Monitor with Threat Detection
+
+Overview
+This project is an intelligent system monitoring dashboard that goes beyond traditional tools by combining **real-time performance tracking with threat detection and control**.
+
+Unlike standard monitors, it not only shows system data but also **analyzes process behavior and enables immediate action**.
+
 ---
 
- Key Highlights
+Key Features
 
-* Clean separation of frontend & backend
-* Modular backend architecture (routers + services pattern)
-* Scalable structure for future features
+ Intelligent Threat Detection
+Analyzes running processes using CPU usage, memory consumption, and heuristic patterns to identify suspicious behavior.
+
+ Real-Time Risk Scoring
+Each process is assigned a dynamic risk level:
+- 🟢 Safe  
+- 🟡 Medium  
+- 🔴 High  
+
+ Threat-Aware Process Control
+Detect → Evaluate → Act  
+Users can instantly terminate high-risk processes directly from the dashboard.
+
+ Live Alert System
+Automatically notifies users when a high-risk process is detected.
+
+ Interactive UI
+Includes real-time graphs, CPU bars, filtering, and sorting for better visualization.
+
+ Future Scope
+- AI-based anomaly detection  
+- Automated threat mitigation  
+- Cross-platform support  
 
 ---
+
+ WHERE IT STANDS OUT
+A system that **monitors, detects, and responds** — not just displays data.
+
+---
+```
 
 Getting Started
 
@@ -80,15 +113,18 @@ Getting Started
 git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
 cd OS_HACKATHON
 
-2. Run Frontend
+2. Install requirements
+pip install -r requirements.txt
+
+4. Run Frontend
 cd frontend
 npm install
 npm run dev
 
-3. Run Backend
+5. Run Backend
 py -m uvicorn backend.app:app --reload
 
-4. Run UI in terminal
+6. Run UI in terminal
 cd cli
 run the main.py
 
