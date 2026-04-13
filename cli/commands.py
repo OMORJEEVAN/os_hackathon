@@ -2,9 +2,7 @@ from backend.services.process_manager import kill_process, get_process_by_pid
 
 
 def kill_process_command():
-    """
-    Ask user for PID and kill the process
-    """
+    
     try:
         pid = int(input("Enter PID to kill: "))
 
@@ -22,9 +20,7 @@ def kill_process_command():
 
 
 def inspect_process_command():
-    """
-    Show details of a specific process
-    """
+
     try:
         pid = int(input("Enter PID to inspect: "))
 
