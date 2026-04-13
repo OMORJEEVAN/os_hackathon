@@ -5,20 +5,20 @@
   height: 100%;
 }
 
-/* MAIN BOX */
+
 .semi-container {
   position: relative;
   width: 100%;
   max-width: 320px;
 }
 
-/* SVG */
+
 .semi-svg {
   width: 100%;
   height: auto;
 }
 
-/* BACKGROUND ARC */
+
 .semi-bg {
   fill: none;
   stroke: rgba(255, 255, 255, 0.08);
@@ -26,7 +26,7 @@
   stroke-linecap: round;
 }
 
-/* PROGRESS ARC */
+
 .semi-progress {
   fill: none;
   stroke: url(#gradient);
@@ -40,7 +40,7 @@
   transition: stroke-dashoffset 0.5s ease;
 }
 
-/* CENTER CONTENT */
+
 .semi-center {
   position: absolute;
   bottom: 10px;
@@ -61,7 +61,7 @@
   color: white;
 }
 
-/* TEXT */
+
 .semi-center h2 {
   margin: 0;
   font-size: 26px;
