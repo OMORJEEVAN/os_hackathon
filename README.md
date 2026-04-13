@@ -63,6 +63,9 @@ npm run dev
 3. Run Backend
 py -m uvicorn backend.app:app --reload
 
+4. Run UI in terminal
+   
+
 Future Improvements
 
 * Backend API integration
