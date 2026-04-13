@@ -1,13 +1,24 @@
-Architecture Overview
+# System Monitor with Threat Detection
+
+## Overview
+This project is an intelligent system monitoring dashboard that goes beyond traditional tools by combining real-time performance tracking with threat detection and control.
+
+Unlike standard system monitors, it not only displays system data but also analyzes process behavior and enables immediate action.
+
 ---
- Frontend
-* React (with Vite)
-* Modern CSS / UI
+
+## Architecture Overview
+
+### Frontend
+- React (with Vite)
+- Modern CSS and UI components
+
+### Backend
+- REST APIs using FastAPI
+
 ---
- Backend
-* REST APIs(fastAPI)
-  
- Project Structure
+
+## Project Structure
 ```
 OS_HACKATHON/
 ├── test.py
@@ -65,85 +76,91 @@ OS_HACKATHON/
      └── models/
          └── schemas.py
 ```
-```
-System Monitor with Threat Detection
-
-Overview
-This project is an intelligent system monitoring dashboard that goes beyond traditional tools by combining **real-time performance tracking with threat detection and control**.
-
-Unlike standard monitors, it not only shows system data but also **analyzes process behavior and enables immediate action**.
 
 ---
 
-Key Features
+## Key Features
 
- Intelligent Threat Detection
+### Intelligent Threat Detection
 Analyzes running processes using CPU usage, memory consumption, and heuristic patterns to identify suspicious behavior.
 
- Real-Time Risk Scoring
+### Real-Time Risk Scoring
 Each process is assigned a dynamic risk level:
-- 🟢 Safe  
-- 🟡 Medium  
-- 🔴 High  
+- Safe  
+- Medium  
+- High  
 
- Threat-Aware Process Control
-Detect → Evaluate → Act  
-Users can instantly terminate high-risk processes directly from the dashboard.
+### Threat-Aware Process Control
+Implements a workflow of detection, evaluation, and action.  
+Users can terminate high-risk processes directly from the dashboard.
 
- Live Alert System
+### Live Alert System
 Automatically notifies users when a high-risk process is detected.
 
- Interactive UI
-Includes real-time graphs, CPU bars, filtering, and sorting for better visualization.
+### Interactive UI
+Provides real-time graphs, CPU usage visualization, filtering, and sorting for better clarity and control.
 
- Future Scope
+---
+
+## Key Insight
+
+This system transforms passive monitoring into active decision-making.  
+It enables users not only to observe system behavior but also to detect and respond to potential threats in real time.
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
+
+cd OS_HACKATHON
+
+### 2. Install Backend Requirements
+pip install -r requirements.txt
+
+### 3. Run Backend
+py -m uvicorn backend.app:app --reload
+
+### 4. Run Frontend
+cd frontend
+npm install
+npm run dev
+
+### 5. Access the Application
+http://localhost:5173/
+
+### 6. Run CLI Interface
+cd cli
+python main.py
+
+
+
+---
+
+## Future Improvements
+
 - AI-based anomaly detection  
 - Automated threat mitigation  
-- Cross-platform support  
+- Authentication system  
+- Database integration  
+- Deployment (Vercel / Render)  
 
 ---
 
- WHERE IT STANDS OUT
-A system that **monitors, detects, and responds** — not just displays data.
+## Contribution
+
+This project was developed as part of a hackathon.  
+Contributions, suggestions, and improvements are welcome.
 
 ---
-```
 
-Getting Started
+## Author
 
-1. Clone the repo:
-*git clone https://github.com/OMORJEEVAN/OS_HACKATHON.git
-*cd OS_HACKATHON
-
-2. Install requirements:
-*pip install -r requirements.txt
-
-4. Run Frontend:
-*cd frontend
-*npm install
-*npm run dev
-
-5. Run Backend:
-*py -m uvicorn backend.app:app --reload
-
-6. Run UI in terminal:
-*cd cli
-*run the main.py
-
-Future Improvements:
-
-* Backend API integration
-* Authentication system
-* Database integration
-* Deployment (Vercel / Render)
-
-Contribution:
-
-This is a hackathon project, but suggestions and improvements are always welcome.
-
-Author:
 Arit Patra
 
+---
 
-Show your support:
-If you like this project, give it a ⭐ on GitHub!
+## Support
+
+If you find this project useful, consider giving it a star on GitHub.
