@@ -17,7 +17,7 @@ app.add_middleware(
 app.include_router(system_router.router)
 
 
-# Root endpoint (just for testing)
+# Root endpoint 
 @app.get("/")
 def root():
     return {
