@@ -11,7 +11,7 @@ export default function ProcessTable({ processes }) {
   const [filter, setFilter] = useState("All");
   const [visibleCount, setVisibleCount] = useState(6);
 
-  /* 🔥 ALERT SYSTEM */
+ 
   useEffect(() => {
     if (!processes.length) return;
 
@@ -23,7 +23,7 @@ export default function ProcessTable({ processes }) {
     return () => clearTimeout(timer);
   }, [processes]);
 
-  /* 🔥 SORT + FILTER */
+ 
   const filteredData = processes
     .filter((p) => {
       if (filter === "All") return true;
@@ -38,15 +38,15 @@ export default function ProcessTable({ processes }) {
       return (b[keyMap[sortBy]] || 0) - (a[keyMap[sortBy]] || 0);
     });
 
-  /* 💀 KILL */
+  
   const handleKill = async (pid) => {
     try {
       console.log("Killing:", pid);
       await killProcess(pid);
-      alert(`✅ Process ${pid} killed`);
+      alert(` Process ${pid} killed`);
     } catch (err) {
       console.error(err);
-      alert("❌ Kill failed");
+      alert(" Kill failed");
     }
   };
 
@@ -56,7 +56,7 @@ export default function ProcessTable({ processes }) {
 
       <h2 className="table-title">Threat Monitor</h2>
 
-      {/* CONTROLS */}
+     
       <div className="controls">
         <div className="filters">
           {["All", "Safe", "Medium", "High"].map((f) => (
@@ -82,7 +82,7 @@ export default function ProcessTable({ processes }) {
         </div>
       </div>
 
-      {/* TABLE */}
+     
       <table className="table">
         <thead>
           <tr>
@@ -149,7 +149,7 @@ export default function ProcessTable({ processes }) {
         </tbody>
       </table>
 
-      {/* SHOW MORE */}
+     
       <div className="show-more-container">
         {visibleCount < filteredData.length ? (
           <button
@@ -171,7 +171,7 @@ export default function ProcessTable({ processes }) {
   );
 }
 
-/* ICON SYSTEM */
+
 function getIcon(name = "") {
   name = name.toLowerCase();
 
