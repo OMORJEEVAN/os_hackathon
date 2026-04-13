@@ -9,14 +9,14 @@
   color: #1e293b;
 }
 
-/* CONTROLS */
+
 .controls {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-/* FILTER BUTTONS */
+
 .filters button {
   margin-right: 8px;
   padding: 6px 14px;
@@ -40,7 +40,7 @@
   color: #0891b2;
 }
 
-/* GLASS SELECT */
+
 .custom-select select {
   background: rgba(255,255,255,0.6);
   backdrop-filter: blur(12px);
@@ -50,7 +50,7 @@
   border-radius: 10px;
 }
 
-/* TABLE */
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -67,7 +67,7 @@
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* ALIGNMENT */
+
 .table th:nth-child(1),
 .table td:nth-child(1) {
   width: 80px;
@@ -90,7 +90,7 @@
   text-align: center;
 }
 
-/* ROW */
+
 .row {
   transition: 0.2s;
 }
@@ -111,19 +111,19 @@
   background: rgba(0,245,212,0.05);
 }
 
-/* PROCESS CELL */
+
 .process-cell {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* ICON */
+
 .icon {
   font-size: 16px;
 }
 
-/* CPU BAR */
+
 .cpu-bar {
   width: 100%;
   height: 6px;
@@ -137,7 +137,7 @@
   background: linear-gradient(90deg, #06b6d4, #3b82f6);
 }
 
-/* CHIP */
+
 .chip {
   padding: 6px 12px;
   border-radius: 999px;
@@ -159,7 +159,7 @@
   color: #dc2626;
 }
 
-/* BUTTON */
+
 .kill-btn {
   background: #ef4444;
   border: none;
@@ -173,7 +173,7 @@
   transform: scale(1.05);
 }
 
-/* SHOW MORE */
+
 .show-more-container {
   display: flex;
   justify-content: center;
