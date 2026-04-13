@@ -124,7 +124,9 @@ It enables users not only to observe system behavior but also to detect and resp
 
 ### 4. Run Frontend
 -cd frontend
+
 -npm install
+
 -npm run dev
 
 ### 5. Access the Application
@@ -132,6 +134,7 @@ It enables users not only to observe system behavior but also to detect and resp
 
 ### 6. Run CLI Interface
 -cd cli
+
 -python main.py
 
 
