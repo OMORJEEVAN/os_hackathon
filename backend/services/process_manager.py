@@ -1,9 +1,6 @@
 import psutil
 
 def get_all_processes():
-    """
-    Returns a list of all running processes with updated CPU usage
-    """
     processes = []
 
     
@@ -36,9 +33,7 @@ def get_all_processes():
 
 
 def get_top_processes(sort_by="cpu", limit=5):
-    """
-    Returns top processes sorted by CPU or memory usage
-    """
+
     processes = get_all_processes()
 
     key = "cpu_percent" if sort_by == "cpu" else "memory_percent"
@@ -53,9 +48,7 @@ def get_top_processes(sort_by="cpu", limit=5):
 
 
 def get_process_by_pid(pid):
-    """
-    Returns detailed info about a specific process
-    """
+    
     try:
         proc = psutil.Process(pid)
 
@@ -76,9 +69,7 @@ def get_process_by_pid(pid):
 
 
 def kill_process(pid):
-    """
-    Safely kills a process by PID
-    """
+
     try:
         proc = psutil.Process(pid)
         proc.terminate()  
