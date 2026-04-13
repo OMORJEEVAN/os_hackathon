@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* 🔥 FULL SCREEN DASHBOARD */
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+
+  /* 🎨 SMOOTH GRADIENT */
+  background: linear-gradient(
+    120deg,
+    #6f7693,
+    #8aaad5,
+    #aaabe8,
+    #6f7693
+  );
+
+  background-size: 300% 300%;
+  animation: premiumGradient 18s ease-in-out infinite;
+
+  color: #1e293b;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔥 PREMIUM ANIMATION */
+@keyframes premiumGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* 🔥 TOP DIALS */
+.top-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+/* EACH CARD SHOULD EXPAND */
+.top-row > * {
+  flex: 1;
+}
+
+/* 🔥 GRAPH FULL WIDTH */
+.graph-full {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 🔥 GLASS */
+.glass {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05),
+    inset 0 0 10px rgba(255, 255, 255, 0.4);
+
+  transition: 0.2s;
+}
+
+.glass:hover {
+  transform: translateY(-2px);
+}
+
+/* LOADING */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-size: 22px;
+}

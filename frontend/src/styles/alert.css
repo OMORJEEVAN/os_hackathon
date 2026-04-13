@@ -1,0 +1,27 @@
+.alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.alert-box {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  animation: slideIn 0.4s ease;
+  box-shadow: 0 0 15px rgba(239,68,68,0.6);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
