@@ -23,7 +23,6 @@ last_process_fetch = 0
 cached_processes = []
 
 
-# -------- HELPERS --------
 
 def get_color(value):
     if value < 40:
@@ -52,11 +51,11 @@ def get_cpu_graph(value):
 
 def get_system_mood(cpu):
     if cpu < 30:
-        return "😴 Idle"
+        return "Idle"
     elif cpu < 70:
-        return "⚡ Busy"
+        return "Busy"
     else:
-        return "🔥 Overloaded"
+        return "Overloaded"
 
 
 def get_kill_recommendation(processes):
@@ -71,7 +70,6 @@ def get_kill_recommendation(processes):
         return "No critical process detected"
 
 
-# -------- DASHBOARD --------
 
 def generate_dashboard():
     global selected_index, last_process_fetch, cached_processes
@@ -94,12 +92,12 @@ def generate_dashboard():
         Layout(name="graph")
     )
 
-    # HEADER
+    
     layout["header"].update(
-        Panel(Align.center("⚡ SMART PROCESS MONITOR ⚡"), style="bold cyan")
+        Panel(Align.center(" SMART PROCESS MONITOR "), style="bold cyan")
     )
 
-    # -------- STATS --------
+    
     stats = get_system_stats()
     cpu = stats["cpu"]["total_cpu_percent"]
     memory = stats["memory"]["percent"]
@@ -111,21 +109,21 @@ def generate_dashboard():
     stats_text.append(f"Disk: {get_bar(disk)} {disk:.2f}%", style=get_color(disk))
 
     layout["stats"].update(
-        Panel(stats_text, title="📊 Stats", border_style="cyan")
+        Panel(stats_text, title=" Stats", border_style="cyan")
     )
 
-    # -------- SINGLE GRAPH (FIXED) --------
+
     graph = get_cpu_graph(cpu)
 
     layout["graph"].update(
         Panel(
             f"{graph}\n\nCPU Usage Over Time",
-            title="📈 CPU Graph",
+            title=" CPU Graph",
             border_style="green"
         )
     )
 
-    # -------- PROCESS CACHE --------
+    
     current_time = time.time()
 
     if current_time - last_process_fetch > 1:
@@ -140,7 +138,7 @@ def generate_dashboard():
     if selected_index >= len(processes):
         selected_index = 0
 
-    # -------- TABLE --------
+
     table = Table(expand=True, show_lines=True)
     table.add_column("PID", style="cyan")
     table.add_column("Name", style="magenta")
@@ -164,12 +162,12 @@ def generate_dashboard():
     layout["right"].update(
         Panel(
             table,
-            title=f"🔥 Processes ({current_sort.upper()})",
+            title=f" Processes ({current_sort.upper()})",
             border_style="magenta"
         )
     )
 
-    # -------- FOOTER (SMART + CONTROLS) --------
+    
     mood = get_system_mood(cpu)
     recommendation = get_kill_recommendation(processes)
 
@@ -182,18 +180,17 @@ def generate_dashboard():
     controls.append("[Q] Quit\n", style="magenta")
 
     footer = Text()
-    footer.append(f"🧠 System Mood: {mood}\n", style="bold")
-    footer.append(f"\n💡 Recommendation:\n{recommendation}\n\n")
+    footer.append(f" System Mood: {mood}\n", style="bold")
+    footer.append(f"\n Recommendation:\n{recommendation}\n\n")
     footer.append(controls)
 
     layout["footer"].update(
-        Panel(footer, border_style="blue", title="⚡ System Insights & Controls")
+        Panel(footer, border_style="blue", title=" System Insights & Controls")
     )
 
     return layout
 
 
-# -------- KEY HANDLING --------
 
 def handle_keys(processes):
     global current_sort, running, selected_index
@@ -223,7 +220,6 @@ def handle_keys(processes):
                 running = False
 
 
-# -------- MAIN LOOP --------
 
 def live_dashboard():
     global running
