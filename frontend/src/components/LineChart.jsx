@@ -23,7 +23,7 @@ export default function LineChartComp({ value }) {
   return (
     <div className="graph-card">
 
-      {/* 🔥 BETTER TITLE */}
+    
       <h2 className="graph-title">System Performance</h2>
 
       <ResponsiveContainer width="100%" height={280}>
