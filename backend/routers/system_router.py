@@ -12,7 +12,6 @@ from backend.services.anamoly_detector import detect_anomalies
 router = APIRouter()
 
 
-# ------------------- RISK ENGINE -------------------
 
 SUSPICIOUS_KEYWORDS = [
     "hack", "keylogger", "miner", "trojan", "malware", "inject", "stealer"
@@ -69,23 +68,21 @@ def attach_risk(processes):
     return updated
 
 
-# ------------------- SYSTEM STATS -------------------
+
 
 @router.get("/stats")
 def stats():
     return get_system_stats()
 
 
-# ------------------- PROCESSES -------------------
 
-# 🔥 ALL PROCESSES (WITH RISK)
+
 @router.get("/processes")
 def processes():
     data = get_all_processes()
     return attach_risk(data)
 
 
-# 🔥 SORTED PROCESSES
 @router.get("/processes/sorted")
 def sorted_processes(
     sort_by: str = Query("cpu", enum=["cpu", "memory", "risk"]),
@@ -105,14 +102,13 @@ def sorted_processes(
     return sorted(data, key=lambda x: x.get(key_map[sort_by], 0), reverse=reverse)
 
 
-# 🔥 TOP PROCESSES (WITH RISK)
+
 @router.get("/processes/top")
 def top_processes(sort_by: str = "cpu", limit: int = 5):
     data = get_top_processes(sort_by, limit)
     return attach_risk(data)
 
 
-# 🔥 FILTER BY RISK LEVEL
 @router.get("/processes/risk/{level}")
 def processes_by_risk(level: str):
     data = get_all_processes()
@@ -123,7 +119,6 @@ def processes_by_risk(level: str):
     return [p for p in data if p["risk_label"] == level]
 
 
-# 🔥 SINGLE PROCESS DETAIL
 @router.get("/process/{pid}")
 def process_detail(pid: int):
     p = get_process_by_pid(pid)
@@ -134,15 +129,13 @@ def process_detail(pid: int):
     return enriched[0]
 
 
-# ------------------- PROCESS CONTROL -------------------
 
-# 🔥 KILL PROCESS
 @router.post("/process/kill/{pid}")
 def kill(pid: int):
     return kill_process(pid)
 
 
-# 🔥 BULK KILL (VERY COOL FEATURE 🔥)
+
 @router.post("/process/kill/bulk")
 def kill_bulk(pids: list[int]):
     results = []
@@ -156,15 +149,13 @@ def kill_bulk(pids: list[int]):
     return results
 
 
-# ------------------- ALERTS -------------------
 
-# 🔥 ANOMALY DETECTION
+
 @router.get("/alerts")
 def alerts():
     return detect_anomalies()
 
 
-# 🔥 HIGH RISK ALERTS ONLY
 @router.get("/alerts/high-risk")
 def high_risk_alerts():
     data = get_all_processes()
