@@ -133,9 +133,7 @@ It enables users not only to observe system behavior but also to detect and resp
 -http://localhost:5173/
 
 ### 6. Run CLI Interface
--cd cli
-
--python main.py
+-python -m cli.main
 
 
 
